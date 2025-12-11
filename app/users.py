@@ -14,7 +14,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-SECRET = os.getenv("SECRET")
+SECRET = os.getenv("SECRET_KEY")
 
 class UserManager(UUIDIDMixin, BaseUserManager[User, uuid.UUID]):
     reset_password_token_secret = SECRET
